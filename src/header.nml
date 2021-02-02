@@ -8,8 +8,8 @@ grf {
 	grfid: "TT\03\01";
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESC);
-	version: 13;
-	min_compatible_version: 9;
+	version: 14;
+	min_compatible_version: 14;
 	url: string(STR_WEBSITE);
 
 param 0 {
@@ -50,5 +50,8 @@ if (version_openttd(1,10,0,28004) > openttd_version) {
 }
 
 disable_item(FEAT_HOUSES);
+
+/* Use sidewalks on desert roads, as in Temperate. */
+desert_paved_roads = 1;
 
 /* *** End Header *** */
